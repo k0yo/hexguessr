@@ -88,12 +88,10 @@ function deltaE2000(rgb1, rgb2) {
     
     const RT = -Math.sin(2 * dTheta * Math.PI / 180) * RC;
     
-    const dE = Math.sqrt(
-        Math.pow(dLp / (kL * SL), 2) + 
-        Math.pow(dCp / (kC * SC), 2) + 
-        Math.pow(dHp / (kH * SH), 2) + 
-        RT * (dCp / (kC * SC)) * (dHp / (kH * SH))
-    );
+    const dE = Math.sqrt(Math.pow(dLp / (kL * SL), 2) + 
+              Math.pow(dCp / (kC * SC), 2) + 
+              Math.pow(dHp / (kH * SH), 2) + 
+              RT * (dCp / (kC * SC)) * (dHp / (kH * SH)));
     
     return dE;
 }
