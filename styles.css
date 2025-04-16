@@ -9,12 +9,16 @@ body {
 
 #guessedColorPanel {
     position: fixed;
-    left: 0;
+    left: -50%;
     top: 0;
     bottom: 0;
     width: 50%;
     z-index: 1;
-    transition: background-color 0.5s ease;
+    transition: left 0.5s ease, background-color 0.5s ease;
+}
+
+#guessedColorPanel.show {
+    left: 0;
 }
 
 .container {
