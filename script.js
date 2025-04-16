@@ -29,7 +29,7 @@ function deltaE2000(rgb1, rgb2) {
     
     const aC1C2 = (C1 + C2) / 2.0;
     
-    const G = 0.5 * (1 - Math.sqrt(Math.pow(aC1C2, 7) / (Math.pow(aC1C2, 7) + Math.pow(25, 7))));
+    const G = 0.5 * (1 - Math.sqrt(Math.pow(aC1C2, 7) / (Math.pow(aC1C2, 7) + Math.pow(25, 7)));
     
     const a1p = (1.0 + G) * a1;
     const a2p = (1.0 + G) * a2;
@@ -131,30 +131,48 @@ function initGame() {
     resultContainer.classList.add('hidden');
     actionButton.textContent = 'Guess';
     isGuessing = true;
+    guessInput.focus(); // Auto-focus the input field
+}
+
+function handleGuess() {
+    if (!isGuessing) return;
+    
+    const userGuess = guessInput.value.trim().toUpperCase();
+    
+    if (!/^#[0-9A-F]{6}$/i.test(userGuess)) {
+        resultDiv.textContent = 'Please enter a valid hex color (e.g., #RRGGBB)';
+        resultContainer.classList.remove('hidden');
+        return;
+    }
+    
+    const actualRgb = hexToRgb(currentColor);
+    const guessedRgb = hexToRgb(userGuess);
+    const difference = deltaE2000(actualRgb, guessedRgb);
+    
+    actualColorBox.style.backgroundColor = currentColor;
+    guessedColorBox.style.backgroundColor = userGuess;
+    resultDiv.textContent = `Color difference: ${difference.toFixed(2)}`;
+    resultContainer.classList.remove('hidden');
+    actionButton.textContent = 'Next';
+    isGuessing = false;
 }
 
 actionButton.addEventListener('click', function() {
     if (isGuessing) {
-        const userGuess = guessInput.value.trim().toUpperCase();
-        
-        if (!/^#[0-9A-F]{6}$/i.test(userGuess)) {
-            resultDiv.textContent = 'Please enter a valid hex color (e.g., #RRGGBB)';
-            resultContainer.classList.remove('hidden');
-            return;
-        }
-        
-        const actualRgb = hexToRgb(currentColor);
-        const guessedRgb = hexToRgb(userGuess);
-        const difference = deltaE2000(actualRgb, guessedRgb);
-        
-        actualColorBox.style.backgroundColor = currentColor;
-        guessedColorBox.style.backgroundColor = userGuess;
-        resultDiv.textContent = `Color difference: ${difference.toFixed(2)} (lower is better)`;
-        resultContainer.classList.remove('hidden');
-        actionButton.textContent = 'Next';
-        isGuessing = false;
+        handleGuess();
     } else {
         initGame();
+    }
+});
+
+// Add Enter key support
+guessInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        if (isGuessing) {
+            handleGuess();
+        } else {
+            initGame();
+        }
     }
 });
 
