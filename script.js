@@ -131,7 +131,7 @@ function initGame() {
     resultContainer.classList.add('hidden');
     actionButton.textContent = 'Guess';
     isGuessing = true;
-    guessInput.focus(); // Auto-focus the input field
+    guessInput.focus();
 }
 
 function handleGuess() {
@@ -140,8 +140,7 @@ function handleGuess() {
     const userGuess = guessInput.value.trim().toUpperCase();
     
     if (!/^#[0-9A-F]{6}$/i.test(userGuess)) {
-        resultDiv.textContent = 'Please enter a valid hex color (e.g., #RRGGBB)';
-        resultContainer.classList.remove('hidden');
+        alert('Please enter a valid hex color (e.g., #RRGGBB)');
         return;
     }
     
@@ -165,7 +164,6 @@ actionButton.addEventListener('click', function() {
     }
 });
 
-// Add Enter key support
 guessInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         if (isGuessing) {
