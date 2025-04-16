@@ -150,7 +150,14 @@ function handleGuess() {
     const guessedRgb = hexToRgb(userGuess);
     const difference = deltaE2000(actualRgb, guessedRgb);
     
+    // Set color immediately without transition
+    guessedColorPanel.style.transition = 'none';
     guessedColorPanel.style.backgroundColor = userGuess;
+    // Force reflow to apply the color change
+    void guessedColorPanel.offsetWidth;
+    // Restore slide transition
+    guessedColorPanel.style.transition = 'left 0.5s ease';
+    
     guessedColorPanel.classList.add('show');
     resultDiv.textContent = `Color difference: ${difference.toFixed(2)}`;
     actionButton.textContent = 'Next';
