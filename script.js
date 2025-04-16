@@ -116,10 +116,8 @@ function getRandomColor() {
 const body = document.body;
 const guessInput = document.getElementById('guessInput');
 const actionButton = document.getElementById('actionButton');
-const resultContainer = document.getElementById('resultContainer');
 const resultDiv = document.getElementById('result');
-const actualColorBox = document.getElementById('actualColor');
-const guessedColorBox = document.getElementById('guessedColor');
+const guessedColorPanel = document.getElementById('guessedColorPanel');
 
 let currentColor = '';
 let isGuessing = true;
@@ -127,8 +125,9 @@ let isGuessing = true;
 function initGame() {
     currentColor = getRandomColor();
     body.style.backgroundColor = currentColor;
+    guessedColorPanel.classList.add('hidden');
     guessInput.value = '';
-    resultContainer.classList.add('hidden');
+    resultDiv.textContent = '';
     actionButton.textContent = 'Guess';
     isGuessing = true;
     guessInput.focus();
@@ -148,10 +147,9 @@ function handleGuess() {
     const guessedRgb = hexToRgb(userGuess);
     const difference = deltaE2000(actualRgb, guessedRgb);
     
-    actualColorBox.style.backgroundColor = currentColor;
-    guessedColorBox.style.backgroundColor = userGuess;
+    guessedColorPanel.style.backgroundColor = userGuess;
+    guessedColorPanel.classList.remove('hidden');
     resultDiv.textContent = `Color difference: ${difference.toFixed(2)}`;
-    resultContainer.classList.remove('hidden');
     actionButton.textContent = 'Next';
     isGuessing = false;
 }

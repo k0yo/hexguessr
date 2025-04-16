@@ -7,19 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="guessedColorPanel" class="hidden"></div>
     <div class="container">
         <h1>HexGuessr</h1>
         <div class="input-container">
             <input type="text" id="guessInput" placeholder="#RRGGBB" maxlength="7">
         </div>
         <button id="actionButton">Guess</button>
-        <div class="result-container" id="resultContainer">
-            <div class="color-comparison">
-                <div class="color-box" id="actualColor"></div>
-                <div class="color-box" id="guessedColor"></div>
-            </div>
-            <div class="result" id="result"></div>
-        </div>
+        <div class="result" id="result"></div>
     </div>
     <script src="script.js"></script>
 </body>
