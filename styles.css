@@ -51,6 +51,7 @@ h1 {
 input {
     padding: 10px 15px;
     font-size: 16px;
+    font-family: 'Space Mono', monospace;
     border: 2px solid #ddd;
     border-radius: 8px;
     width: 120px;
@@ -66,6 +67,7 @@ input:focus {
 button {
     padding: 12px 30px;
     font-size: 16px;
+    font-family: 'Space Mono', monospace;
     font-weight: bold;
     background-color: #000;
     color: white;
