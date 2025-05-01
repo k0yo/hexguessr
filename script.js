@@ -161,16 +161,13 @@ function handleGuess() {
     const maxDistance = getMaxColorDistance();
     const score = calculateScore(difference, maxDistance);
     
-    // Set color immediately without transition
     guessedColorPanel.style.transition = 'none';
     guessedColorPanel.style.backgroundColor = userGuess;
-    // Force reflow to apply the color change
     void guessedColorPanel.offsetWidth;
-    // Restore slide transition
     guessedColorPanel.style.transition = 'left 0.5s ease';
     
     guessedColorPanel.classList.add('show');
-    resultDiv.textContent = `Score: ${score} points`;
+    resultDiv.textContent = `Score: ${score} points (${difference.toFixed(2)} color difference)`;
     actionButton.textContent = 'Next';
     isGuessing = false;
 }
