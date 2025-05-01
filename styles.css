@@ -10,7 +10,7 @@ body {
 
 header {
     background-color: rgba(40, 40, 40, 0.95);
-    color: white;
+    color: #fff;
     padding: 15px 20px;
     position: fixed;
     top: 0;
@@ -22,6 +22,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 1.5rem;
+    color: #fff;
 }
 
 #guessedColorPanel {
@@ -52,6 +53,7 @@ header h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
     z-index: 2;
 }
 
@@ -62,7 +64,7 @@ h1 {
 }
 
 .input-container {
-    margin-bottom: 15px;
+    margin: 0;
 }
 
 input {
