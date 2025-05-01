@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #000;
+    background-color: rgba(40, 40, 40, 0.95);
     color: white;
     padding: 15px 20px;
     position: fixed;
@@ -44,7 +44,7 @@ header h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 25%;
+    height: 20%;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
