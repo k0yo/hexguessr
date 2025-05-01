@@ -136,6 +136,15 @@ function initGame() {
     }, 500);
 }
 
+function getMaxColorDistance() {
+    return deltaE2000([0, 0, 0], [255, 255, 255]);
+}
+
+function calculateScore(distance, maxDistance) {
+    const score = Math.round(5000 * (1 - (distance / maxDistance)));
+    return Math.max(0, score);
+}
+
 function handleGuess() {
     if (!isGuessing) return;
     
@@ -149,6 +158,8 @@ function handleGuess() {
     const actualRgb = hexToRgb(currentColor);
     const guessedRgb = hexToRgb(userGuess);
     const difference = deltaE2000(actualRgb, guessedRgb);
+    const maxDistance = getMaxColorDistance();
+    const score = calculateScore(difference, maxDistance);
     
     // Set color immediately without transition
     guessedColorPanel.style.transition = 'none';
@@ -159,7 +170,7 @@ function handleGuess() {
     guessedColorPanel.style.transition = 'left 0.5s ease';
     
     guessedColorPanel.classList.add('show');
-    resultDiv.textContent = `Color difference: ${difference.toFixed(2)}`;
+    resultDiv.textContent = `Score: ${score} points`;
     actionButton.textContent = 'Next';
     isGuessing = false;
 }
