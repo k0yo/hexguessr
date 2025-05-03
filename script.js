@@ -98,6 +98,10 @@ function deltaE2000(rgb1, rgb2) {
 
 function hexToRgb(hex) {
     hex = hex.replace('#', '');
+    // Handle 3-digit hex codes
+    if (hex.length === 3) {
+        hex = hex.split('').map(char => char + char).join('');
+    }
     const r = parseInt(hex.substring(0, 2), 16);
     const g = parseInt(hex.substring(2, 4), 16);
     const b = parseInt(hex.substring(4, 6), 16);
@@ -150,8 +154,8 @@ function handleGuess() {
     
     const userGuess = guessInput.value.trim().toUpperCase();
     
-    if (!/^#[0-9A-F]{6}$/i.test(userGuess)) {
-        alert('Please enter a valid hex color (e.g., #RRGGBB)');
+    if (!/^#[0-9A-F]{3}$|^#[0-9A-F]{6}$/i.test(userGuess)) {
+        alert('Please enter a valid hex color (e.g., #RRGGBB or #RGB)');
         return;
     }
     
