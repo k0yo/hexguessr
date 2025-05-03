@@ -17,6 +17,14 @@ header {
     left: 0;
     right: 0;
     z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo {
+    height: 24px;
+    width: auto;
 }
 
 header h1 {
