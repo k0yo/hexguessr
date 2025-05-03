@@ -171,7 +171,7 @@ function handleGuess() {
     guessedColorPanel.style.transition = 'left 0.5s ease';
     
     guessedColorPanel.classList.add('show');
-    resultDiv.textContent = `Score: ${score} points (${difference.toFixed(2)} color difference)`;
+    resultDiv.textContent = `Answer: ${currentColor} | Score: ${score}`;
     actionButton.textContent = 'Next';
     isGuessing = false;
 }

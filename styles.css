@@ -111,3 +111,18 @@ button:hover {
     padding-bottom: 1vh;
     text-align: center;
 }
+
+.result .separator {
+    font-weight: bold;
+    padding: 0 0.5em;
+}
+
+.result .answer,
+.result .score {
+    white-space: nowrap;
+}
+
+.result::before,
+.result::after {
+    display: none;
+}
