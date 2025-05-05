@@ -20,6 +20,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    justify-content: space-between;
 }
 
 .header-logo {
@@ -41,7 +42,6 @@ header h1 {
     width: 50%;
     z-index: 1;
     transition: left 0.5s ease;
-    /* No background-color transition */
 }
 
 #guessedColorPanel.show {
@@ -104,11 +104,14 @@ button {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
     min-width: 12vh;
 }
 
-button:hover {
+#actionButton {
+    transition: all 0.3s ease;
+}
+
+#actionButton:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -133,4 +136,20 @@ button:hover {
 .result::before,
 .result::after {
     display: none;
+}
+
+.sign-in-btn {
+    padding: 0.5em 1.5em;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.sign-in-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
