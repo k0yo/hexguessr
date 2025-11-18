@@ -1,4 +1,4 @@
-# HexGuessr - A Color Guessing Game 🌈🎮
+# HexGuessr - A Color Guessing Game
 
 *[Insert HexGuessr Logo]*
 
@@ -15,13 +15,13 @@
 HexGuessr is a fun, interactive color guessing game inspired by GeoGuessr. Test your color perception skills by guessing hex codes of randomly generated colors! Play solo or challenge friends in multiplayer mode with specialized color "maps" that focus on specific color ranges.
 
 ## Features
-- 🔍 **Color Guessing**: Guess the hex code of the displayed color
-- 🎯 **CIEDE2000 Scoring**: Accurate color difference algorithm for fair scoring
-- 🕹️ **Multiple Game Modes**: Singleplayer practice or competitive multiplayer
-- ⏱️ **Timed Rounds**: Timed guessing periods in multiplayer
-- 🗺️ **Color Maps**: Specialized color ranges like monochrome, pure hues, etc.
-- 🛠️ **Custom Maps**: Create your own color maps with custom parameters
-- 🌐 **Multiplayer Rooms**: Play with friends in real-time
+- **Color Guessing**: Guess the hex code of the displayed color
+- **CIEDE2000 Scoring**: Accurate color difference algorithm for fair scoring
+- **Multiple Game Modes**: Singleplayer practice or competitive multiplayer
+- **Timed Rounds**: Timed guessing periods in multiplayer
+- **Color Maps**: Specialized color ranges like monochrome, pure hues, etc.
+- **Custom Maps**: Create your own color maps with custom parameters
+- **Multiplayer Rooms**: Play with friends in real-time
 
 ## Game Modes
 
