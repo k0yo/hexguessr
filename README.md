@@ -1,6 +1,6 @@
 # HexGuessr - A Color Guessing Game
 
- ![HexGuessr Logo](logo.svg)
+![HexGuessr Logo](logo.svg)
 
 ## Table of Contents
 - [About](#about)
@@ -12,40 +12,40 @@
 - [License](#license)
 
 ## About
-HexGuessr is a fun, interactive color guessing game inspired by GeoGuessr. Test your color perception skills by guessing hex codes of randomly generated colors! Play solo or challenge friends in multiplayer mode with specialized color "maps" that focus on specific color ranges.
+HexGuessr is a color guessing game inspired by GeoGuessr. Players test their color perception skills by guessing hex codes of randomly generated colors. The game supports both singleplayer practice and competitive multiplayer modes with specialized color ranges.
 
 ## Features
-- **Color Guessing**: Guess the hex code of the displayed color
-- **CIEDE2000 Scoring**: Accurate color difference algorithm for fair scoring
-- **Multiple Game Modes**: Singleplayer practice or competitive multiplayer
-- **Timed Rounds**: Timed guessing periods in multiplayer
-- **Color Maps**: Specialized color ranges like monochrome, pure hues, etc.
-- **Custom Maps**: Create your own color maps with custom parameters
-- **Multiplayer Rooms**: Play with friends in real-time
+- Color guessing based on hex codes
+- CIEDE2000 color difference algorithm for scoring
+- Singleplayer and multiplayer modes
+- Timed rounds in multiplayer
+- Various color maps with different color ranges
+- Custom color map creation
+- Real-time multiplayer rooms
 
 ## Game Modes
 
 ### Singleplayer
 - Unlimited guessing rounds
-- Immediate feedback with your score
-- Color resets after each guess
-- Track your personal best scores
+- Immediate score feedback
+- Color regeneration after each guess
+- Personal best score tracking
 
 ### Multiplayer
-- Join rooms with friends or random players
-- Customizable time limit
-- All players guess simultaneously
-- Leaderboard shows who's the most color-accurate
+- Join rooms with friends or other players
+- Configurable time limits
+- Simultaneous guessing
+- Leaderboard displaying player accuracy
 
 ## Color Maps
-Choose from various color maps to test different aspects of your color perception:
+Available color maps for different color perception challenges:
 
 - **Full Spectrum**: All possible colors
-- **Monochrome**: Shades of black, white, and gray
-- **Pure Hues**: Fully saturated colors only
-- **Pastel World**: Soft, light colors
+- **Monochrome**: Black, white, and gray shades
+- **Pure Hues**: Fully saturated colors
+- **Pastel World**: Light, soft colors
 - **Dark Mode**: Deep, dark colors
-- **Custom Maps**: Create your own color parameters
+- **Custom Maps**: User-defined color parameters
 
 ## Installation
 To run HexGuessr locally:
@@ -63,13 +63,13 @@ To run HexGuessr locally:
    ```bash
    npm run dev
    ```
-4. Open your browser to `http://localhost:3000`
+4. Open `http://localhost:3000` in your browser
 
 ## Contributing
-Contributions are welcome! Please follow these steps:
+Contributions are welcome. Please follow these steps:
 
 1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
@@ -79,4 +79,4 @@ Distributed under the [MIT License](LICENSE)
 
 ---
 
-**HexGuessr** - How well do you really know colors? 🎨
+HexGuessr - A color perception challenge
