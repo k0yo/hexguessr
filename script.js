@@ -98,7 +98,7 @@ function deltaE2000(rgb1, rgb2) {
 
 function hexToRgb(hex) {
     hex = hex.replace('#', '');
-    // Handle 3-digit hex codes
+    
     if (hex.length === 3) {
         hex = hex.split('').map(char => char + char).join('');
     }
